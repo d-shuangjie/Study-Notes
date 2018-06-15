@@ -1,0 +1,40 @@
+﻿一、git remote:
+
+git remote会列出已经设置的每个仓库的简短名称,clone一个仓库之后的默认名称是origin;
+git remote -v 显示每一个git存储得到远程仓库对应的url
+git remote add origin https://github.com/fuyunwang/IMAPP.git表示添加一个远程仓库并起一个名字叫做origin(默认就是这个)
+git remote show origin可以查看关于origin远程仓库的详细信息
+git remote rename origin pp:将远程仓库在本地的简短名称重命名为pp
+git remote rm origin:删除本地的指定远程仓库
+二、git fetch:
+
+git fetch 仓库地址或者仓库名,其中仓库名是在添加仓库的时候起的名称,该命令会从远程仓库中获得所有本地仓库没有的数据,但是请注意这里不会将远程仓库的数据合并到本地的仓库中。我们可以查看远程仓库的所有信息,然后手动合并数据,比如我们可以查看所有远程分支然后合并到本地的仓库。
+三、git clone:
+
+git clone会拉取远程仓库的内容,默认在本地显示远程的仓库的简短名称是origin,本地的分支默认是master。并且默认会设置本地的仓库跟踪远程的仓库
+四、git pull:
+
+git pull会拉取远程仓库的更新数据并且会自动合并到当前的工作区中。一般命令:git pull origin master
+五、git push:
+
+git push会将本地的分支推送的远程的仓库,但是需要注意远程仓库中不能有本地分支没有的文件;即远程仓库中有新的文件的时候我们需要先拉取新文件并整合自己的工程,之后再push;一般命令:git push origin master
+六、git tag:
+
+git tag:列举所有可用的标签
+git tag -a 0.1 -m “0.1版本”:创建版本名为0.1的注释标签
+git push origin master 0.1: 将本地的0.1版本的代码推送到远程仓库,并给远程仓库设置标签;一次性推送所有标签:git push origin master –tags
+git show 0.1:查看0.1标签的数据及其提交信息
+git log –pretty=oneline:查看历史提交信息,git tag -a v1.0 部分位的校验和,就可以为其打上v1.0的标签
+七、git branch:
+
+git brach newbra:创建一个名为newbra的新分支。
+git checkout newbra:git init和git clone创建的默认分支都是master,该命令会切换到newbra分支
+git checkout -b newbra:相当于上面两条命令之和,即先创建新分支newbra然后切换到新分支上
+git log –oneline –decorate –graph –all会输出当前的提交历史,其中包括分支的指向和历史项目的分支情况
+git merge newbra:将新的代码和原来的代码相整合,并生成新的主分支
+git branch -d newbra:merge完成之后要删除原来的newbra分支
+git branch –merged 可以查看有哪些分支已经并入了当前的分支;git branch –no-merged可以查看有哪些分支还没有并入当前的分支
+
+八、生成ssh key 
+
+ssh-keygen -t rsa -C “shuangjie@163.com”

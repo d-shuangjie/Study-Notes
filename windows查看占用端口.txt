@@ -1,0 +1,7 @@
+查看所有端口   netstat -ano|findstr
+
+查看指定的端口 netstat -ano|findstr "prot"
+
+查看端口对应的进程 tasklist|findstr "pid"
+
+结束该进程 taskkill /f /t /im tor.exe
