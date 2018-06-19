@@ -21,3 +21,14 @@ consul agent -dev -client 0.0.0.0
 -client 0.0.0.0 表示所有IP都可以访问UI(http://ip:8500/ui/)
 
 如果没有添加到环境变量，导航到指定文件夹 ./consul 命令也可行
+
+8.集群
+./consul agent -server -ui -data-dir=/usr/local/consul/data -config-dir /etc/consul.d/ -advertise=47.52.195.201 -client 0.0.0.0 -node=agent-one -datacenter=dc1
+
+./consul agent -server -ui -data-dir=/usr/local/consul/data -config-dir /etc/consul.d/ -advertise=154.8.160.108 -client 0.0.0.0 -node=agent-two -datacenter=dc1
+
+9.查看
+./consul members
+
+10.查看集群状态
+./consul operator raft list-peers
