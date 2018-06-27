@@ -27,4 +27,7 @@ MySQL包括一个安全脚本，以更改一些较不安全的默认选项，如
 我们可以验证我们的安装，并通过与连接获取相关信息mysqladmin工具，客户端，让您运行管理命令。 使用以下命令连接到MySQL作为根 （ -u root ），提示输入密码（ -p ），并返回版本  mysqladmin -u root -p version
 
 5.添加用户并授权
+create 'user01' identified by '!QAZxsw2'
+grant all on *.* to 'user01'@'%';
 
+6.navciat 测试连接
