@@ -5,3 +5,6 @@
 搜索指定rpm包是否安装 rpm -qa | grep httpd　
 
 安装rpm包 rpm -ivh  /media/cdrom/RedHat/RPMS/samba-3.0.10-1.4E.i386.rpm
+
+选择安装版本 alternatives --install /usr/bin/java java /tools/jdk/bin/java 3    
+            alternatives --config java
