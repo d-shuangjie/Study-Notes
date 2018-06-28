@@ -1,1 +1,10 @@
 
+1.cd /usr
+2.mkdir java
+3.sudo wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
+"http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51-linux-x64.tar.gz"
+4.sudo tar xvf jdk-8u51-linux-x64.tar.gz
+5.sudo chown -R root: jdk1.8.0_51
+6.sudo alternatives --install /usr/bin/java java /opt/jdk1.8.0_51/bin/java 1
+7.sudo update-alternatives --config java
+8.java -version
