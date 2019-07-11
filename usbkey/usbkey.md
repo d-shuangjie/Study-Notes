@@ -19,7 +19,9 @@
     
     ![Alt text](ukeyimages/nginxssl.jpg)
 
-8. 创建客户端证书并安装到ukey
+8. 使用SAC初始化ukey
+
+9. 创建客户端证书并安装到ukey
 
 
 ## 客户端配置
@@ -31,8 +33,28 @@
 
     Mac  /usr/local/lib/libeTPkcs11.dylib
 
-3. 插入ukey在浏览器里输入URL访问,就会弹出输入pin密码的对话框,输入就能访问
+3. IE和Chrome原生支持,在Window上好使,在Mac上有问题,还在想办法解决
 
+4. 插入ukey在浏览器里输入URL访问,就会弹出输入pin密码的对话框,输入就能访问
+
+## 注意事项
+
+1. server证书的Common name必须和nginx域名保持一致
+2. 因为自己颁发的证书不受信任,当拔掉ukey再次插入的时候没有弹出PIN密码框,移除信任后重新访问
+3. Firefox 载入的PKCS#11库在安装路径里,所以先得安装SAC
+
+## 演示截图
+
+* Firefox 效果图
+    ![Firefox](ukeyimages/firefox_show.jpg)
+
+* Chrome 效果图
+    ![Chrome](ukeyimages/chrome_show.jpg)
+
+* IE 效果图
+    ![IE](ukeyimages/ie_show.jpg)
+
+## 以上详细步骤在下边的文档里
 
 * [产品链接](https://item.jd.com/22214444669.html)
 
@@ -40,4 +62,4 @@
 
 * [颁发证书参考文档](https://pan.baidu.com/s/1JNTmbWvvfYTkWALwU4_HLw) 提取码: 2ye3 
 
-* [在Linux上设置windows CA参考文档](https://cbudde.com/microsoft/certificate-services/setting-up-windows-root-ca-on-centos-6-9-linux-server/)
+* [在Linux上设置Windows CA参考文章](https://cbudde.com/microsoft/certificate-services/setting-up-windows-root-ca-on-centos-6-9-linux-server/)
