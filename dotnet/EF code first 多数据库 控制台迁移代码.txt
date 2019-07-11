@@ -1,0 +1,19 @@
+1.启动迁移 Enable Migrations　
+
+　　Enable-Migrations -MigrationsDirectory "MigrationsOne" -ContextTypeName "MyFirstDb"
+
+　　MigrationsOne：自定义的migrations文件夹的名字;
+
+　　MyFirstDb:你的DbContext的名字;
+
+2.添加迁移 Add-Migrations
+
+　　Add-Migration -ConfigurationTypeName "WebApp.MigrationsOne.Configuration" AddPerson
+
+　　WebApp.MigrationsOne.Configuration：Configuration文件完整的路径;
+
+　　AddPerson：自定义迁移文件的名字;
+
+3.更新数据库 Update-Database
+
+　　Update-Database -ConfigurationTypeName "WebApp.MigrationsOne.Configuration";

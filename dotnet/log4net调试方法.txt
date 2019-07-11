@@ -1,0 +1,19 @@
+1、config文件下添加以下阶段
+  <appSettings>
+    <add key="log4net.Internal.Debug" value="true"/>
+  </appSettings>
+
+2、configuration节点下添加，log4net.txt文件要先建好  
+
+  <system.diagnostics>
+    <trace autoflush="true">
+      <listeners>
+        <add
+            name="textWriterTraceListener"
+            type="System.Diagnostics.TextWriterTraceListener"
+            initializeData="D:\tmp\log4net.txt" />
+      </listeners>
+    </trace>
+  </system.diagnostics>
+
+配置好后就可以查看log4net的debug信息了

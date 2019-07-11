@@ -1,0 +1,7 @@
+SQL 2012 下连接LOCALDB，字符串为：
+
+Data Source=(LocalDB)\v11.0;Initial Catalog=D:\aa.MDF;Integrated Security=True
+
+SQL 2014 下连接LOCALDB，字符串为：
+
+Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=D:\aa.MDF;Integrated Security=True

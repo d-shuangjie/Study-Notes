@@ -1,0 +1,10 @@
+using (var context = new Context())
+{
+    XmlWriterSettings settings = new XmlWriterSettings();
+    settings.Indent = true;
+ 
+    using (XmlWriter writer = XmlWriter.Create(@"Model.edmx", settings))
+    {
+        EdmxWriter.WriteEdmx(context, writer);
+    }                            
+}

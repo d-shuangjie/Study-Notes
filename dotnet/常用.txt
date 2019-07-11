@@ -1,0 +1,84 @@
+分机号 8013
+
+远程办公vpn
+39.155.158.138：443
+
+
+服务器 Wy@880211
+SQL:  !QAZxsw2
+svn dongsj密码!QAZxsw2
+odwzNJD90!go8%$eqiyd
+
+
+http://172.16.0.131/messagebus/api/Default/Publish
+
+
+api.kr.xingyuanauto.com/logistics/plantform
+http://api.kr.xingyuanauto.com/logisticsapi/
+
+http://api.kr.xingyuanauto.com/logistics/paltform/api/logistics/queryquote
+http://api.kr.xingyuanauto.com/logistics/paltform/api/logistics/QueryQuoteNew
+
+http://api.kr.xingyuanauto.com/basedataapi/api/proxies
+
+
+http://api.kr.xingyuanauto.com/logistics/paltform
+http://api.kr.xingyuanauto.com/sign/api/sign/PostSign
+http://api.kr.xingyuanauto.com/logisticsapi/api/proxies
+http://api.kr.xingyuanauto.com/basedataapi/api/proxies
+
+http://api.kr.xingyuanauto.com/logisticsapi/api/logistics
+
+
+名称：北京行圆汽车信息技术有限公司
+税号：91110108MA009QYB3C
+开户行：中国银行北京车道沟支行
+基本户账号：348066002634
+地址：北京市海淀区西四环北路158号1幢5层7006号
+电话：010-53930036
+
+http://192.168.3.101:9092
+
+
+1进口车，2:主机厂，3平台
+
+待优化：错误信息的传递问题
+
+
+
+
+http://184.api.kr.xingyuanauto.com/channelhub/api/proxies
+count 公里数 price报价 skucode BS17070311005954802
+
+
+
+http://184.api.kr.xingyuanauto.com/logisticsapi.anji/services/anjiwebservices.asmx?WSDL
+
+
+
+  <maxSizeRollBackups value="360" />
+  <maximumFileSize value="10MB" />
+
+  <filter type="log4net.Filter.LevelMatchFilter">
+    <loggerToMatch value="XY_RequestLog" />
+    <acceptOnMatch value="false" />      
+  </filter>
+
+
+今天电话会议中主要问题点跟踪结果如下：
+商务：
+  1.同城距离和价格确定  --待确认
+  2.上门提车与送车上门的费用 --已确认，报价中已包含二者费用
+  3.价格是否与车型相关 --目前报价中与车型无关
+  4.整板与零担的数量范围 --已确认，10台以上(包含10台)即为整板
+
+接口：
+  1.车型信息对照关系  --待确认
+  2.城市信息对照关系  --待确认
+  3.订单在途接口增加订单状态 --待调整
+  4.在途位置获取频率，暂定4~6小时一次  --已确认
+
+
+  添加配置文件AppClientConfig
+  修改配置文件appSettings
+  添加新代理类

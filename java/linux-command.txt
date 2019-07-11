@@ -1,0 +1,12 @@
+查看端口是否被占用  netstat -anp|grep 80
+
+查找文件 find / -name kestrel-helloapi.service
+
+查找文本 grep -r 15678 /etc
+
+搜索指定rpm包是否安装 rpm -qa | grep httpd　
+
+安装rpm包 rpm -ivh  /media/cdrom/RedHat/RPMS/samba-3.0.10-1.4E.i386.rpm
+
+选择安装版本 alternatives --install /usr/bin/java java /tools/jdk/bin/java 3    
+            alternatives --config java
