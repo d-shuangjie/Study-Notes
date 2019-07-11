@@ -1,4 +1,0 @@
-var type = typeof(IModuleBase);
-var types = AppDomain.CurrentDomain.GetAssemblies()
-    .SelectMany(s => s.GetTypes())
-    .Where(p => type.IsAssignableFrom(p)&& p.IsClass);
