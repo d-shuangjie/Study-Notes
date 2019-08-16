@@ -37,3 +37,7 @@
 
  mysqladmin -u root -p version
  SHOW VARIABLES LIKE 'datadir';
+
+10. 远程访问权限
+    GRANT ALL PRIVILEGES ON *.* TO 'root'@'219.143.154.194' IDENTIFIED BY '!QAZxsw2' WITH GRANT OPTION;
+    FLUSH PRIVILEGES;
