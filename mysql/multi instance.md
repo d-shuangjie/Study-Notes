@@ -32,3 +32,7 @@
 6. 修改密码
 
     ALTER USER 'root'@'localhost' IDENTIFIED BY '!QAZxsw2';
+
+
+
+

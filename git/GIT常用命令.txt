@@ -38,3 +38,9 @@ git branch –merged 可以查看有哪些分支已经并入了当前的分支;g
 八、生成ssh key 
 
 ssh-keygen -t rsa -C “shuangjie@163.com”
+
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/d-shuangjie/sales-management-ui.git
+git push -u origin master
